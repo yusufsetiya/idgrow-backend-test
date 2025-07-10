@@ -14,8 +14,8 @@ class KategoriSeeder extends Seeder
     public function run(): void
     {
         KategoriProduk::create([
-            'nama_kategori' => 'Elektronik',
-            'deskripsi' => 'Kategori untuk produk elektronik seperti smartphone, laptop, dan perangkat elektronik lainnya.',
+            'nama_kategori' => 'Perkakas',
+            'deskripsi' => 'Kategori untuk produk perkakas.',
         ]);
 
         KategoriProduk::create([
@@ -24,8 +24,8 @@ class KategoriSeeder extends Seeder
         ]);
 
         KategoriProduk::create([
-            'nama_kategori' => 'pakaian',
-            'deskripsi' => 'Kategori untuk produk pakaian dan aksesori seperti baju, celana, sepatu, dan tas.',
+            'nama_kategori' => 'Alumunium',
+            'deskripsi' => 'Kategori untuk produk berbahan alumunium',
         ]);
     }
 }
