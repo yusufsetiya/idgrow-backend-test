@@ -59,6 +59,10 @@ class AuthController extends Controller
             ], 500);
         } 
     }
+
+    /**
+     * Handle user login.
+     */
     public function login(Request $request)
     {
         // Validasi input
@@ -101,6 +105,9 @@ class AuthController extends Controller
         ],200);
     }
 
+    /**
+     * Handle user logout.
+     */
     public function logout(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
