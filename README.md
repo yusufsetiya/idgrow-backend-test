@@ -1,10 +1,10 @@
-# 📦 Inventory API
+# Inventory API
 
 Inventory API adalah RESTful API berbasis Laravel yang dirancang untuk mengelola data user, produk, lokasi, kategori, serta mutasi barang. Proyek ini dikembangkan sebagai bagian dari tes seleksi Backend Developer di ID-Grow (PT. Clavata Extra Sukses).
 
 ---
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
 - Autentikasi menggunakan Bearer Token (Laravel Sanctum)
 - CRUD untuk User, Produk, Lokasi, Kategori, dan Mutasi
@@ -17,7 +17,7 @@ Inventory API adalah RESTful API berbasis Laravel yang dirancang untuk mengelola
 
 ---
 
-## 🧾 Teknologi
+## Teknologi
 
 - Laravel 12
 - PHP 8.2
@@ -27,11 +27,47 @@ Inventory API adalah RESTful API berbasis Laravel yang dirancang untuk mengelola
 
 ---
 
-## ⚙️ Cara Instalasi & Menjalankan Proyek
+## Cara Instalasi & Menjalankan Proyek
 
+### 🔹 Opsi 1: Tanpa Docker (Lokal)
+1. Clone repo dan masuk ke folder:
+   ```bash
+   git clone https://github.com/yusufsetiya/idgrow-backend-test.git
+   cd idgrow-backend-test
+   ```
+2. Salin dan edit `.env` sesuai database lokal:
+   ```env
+   DB_HOST=127.0.0.1
+   DB_DATABASE=inventory_api
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+3. Jalankan perintah berikut:
+   ```bash
+   composer install
+   php artisan key:generate
+   php artisan migrate --seed
+   php artisan serve
+   ```
 
+### 🔹 Opsi 2: Dengan Docker
+1. Build dan jalankan container:
+   ```bash
+   docker build -t inventory-api .
+   docker run -p 8000:8000 --name inventory-api-container inventory-api
+   ```
+2. Pastikan `.env` menggunakan:
+   ```env
+   DB_HOST=host.docker.internal
+   ```
+3. Migrasi & seed dari host:
+   ```bash
+   php artisan migrate --seed
+   ```
 
-## 📄 Dokumentasi API (Postman)
+API dapat diakses di `http://localhost:9000`
+
+## Dokumentasi API (Postman)
 
 Link dokumentasi Postman:
 [📬 Klik di sini untuk melihat dokumentasi](https://documenter.getpostman.com/view/26396459/2sB34fkfZa)
