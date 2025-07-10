@@ -35,7 +35,7 @@ Inventory API adalah RESTful API berbasis Laravel yang dirancang untuk mengelola
    git clone https://github.com/yusufsetiya/idgrow-backend-test.git
    cd idgrow-backend-test
    ```
-2. Salin dan edit `.env` sesuai database lokal:
+2. Rename `.env.example` menjadi `.env` dan edit konfigurasi database sesuai database lokal:
    ```env
    DB_HOST=127.0.0.1
    DB_DATABASE=inventory_api
