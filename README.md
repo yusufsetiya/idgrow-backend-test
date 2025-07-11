@@ -72,6 +72,11 @@ Inventory API adalah RESTful API berbasis Laravel yang dirancang untuk mengelola
    ```
 4. API dapat diakses di `http://{ip-server-anda}:8000`:
 
+5. Untuk stop container jalankan:
+   ```bash
+   docker stop {CONTAINER ID}
+   ```
+
 ## Dokumentasi API (Postman)
 
 Link dokumentasi Postman:
