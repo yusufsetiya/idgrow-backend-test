@@ -70,7 +70,7 @@ Inventory API adalah RESTful API berbasis Laravel yang dirancang untuk mengelola
    docker build -t inventory-api .
    docker run -p 8000:8000 inventory-api
    ```
-4. API dapat diakses di `http://{ip-server-anda}:8000`:
+4. API dapat diakses di `http://{ip-server-anda}:8000/api/`:
 
 5. Untuk stop container jalankan:
    ```bash
