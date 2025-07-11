@@ -22,7 +22,7 @@ Inventory API adalah RESTful API berbasis Laravel yang dirancang untuk mengelola
 - Laravel 12
 - PHP 8.2
 - MySQL
-- Docker (tanpa Docker Compose)
+- Docker
 - Postman
 
 ---
