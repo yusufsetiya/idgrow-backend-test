@@ -51,21 +51,26 @@ Inventory API adalah RESTful API berbasis Laravel yang dirancang untuk mengelola
    ```
 
 ### 🔹 Opsi 2: Dengan Docker
-1. Build dan jalankan container:
+1. Clone repo dan masuk ke folder:
+   ```bash
+   git clone https://github.com/yusufsetiya/idgrow-backend-test.git
+   cd idgrow-backend-test
+   ```
+2. Ubah konfigurasi database di `.env.example` sesuai dengan database online yang anda punya:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=
+   DB_PORT=
+   DB_DATABASE=
+   DB_USERNAME= 
+   DB_PASSWORD=
+   ```
+3. Build dan jalankan container:
    ```bash
    docker build -t inventory-api .
-   docker run -p 8000:8000 --name inventory-api-container inventory-api
+   docker run -p 8000:8000 inventory-api
    ```
-2. Pastikan `.env` menggunakan:
-   ```env
-   DB_HOST=host.docker.internal
-   ```
-3. Migrasi & seed dari host:
-   ```bash
-   php artisan migrate --seed
-   ```
-
-API dapat diakses di `http://localhost:9000`
+4. API dapat diakses di `http://{ip-server-anda}:8000`:
 
 ## Dokumentasi API (Postman)
 
